@@ -9,6 +9,9 @@
 .row-reversed{
     flex-direction: row-reverse;
 }
+.center{
+    justify-content: center;
+}
 nav{
     background-color: midnightblue;
     padding: 10px 0px;
@@ -63,6 +66,49 @@ nav h1{
 
 .general-info .row,.education .row{
     margin: 10px 0;
+}
+.modal-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(51, 51, 51, 0.93);
+}
+.hide{
+    display: none;
+}
+.modal{
+    position: relative;
+    background-color: white;
+    padding: 0 10px;
+    max-width: 80vw;
+    min-width: 70vw;
+}
+#close-modal{
+    margin-top: 10px;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 16pt;
+    border: 1px solid red;
+    cursor: pointer;
+}
+#close-modal:hover{
+    color:white;
+    background-color: red;
+}
+#preview{
+    background-color: lime;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16pt;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 15px;
 }
 @media screen and (max-width: 700px){
     .row{
