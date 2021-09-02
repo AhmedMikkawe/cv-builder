@@ -7,7 +7,7 @@ class GeneralInfo extends Component{
     }
     onSaveClick(e){
         e.preventDefault();
-        this.props.generalInfoHandler();
+        this.props.clickHandler();
     }
     render() {
         return(

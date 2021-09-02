@@ -3,6 +3,11 @@ import {Component} from "react";
 class Education extends Component{
     constructor(props) {
         super(props);
+        this.onSaveClick = this.onSaveClick.bind(this)
+    }
+    onSaveClick(e){
+        e.preventDefault();
+        this.props.clickHandler();
     }
     render() {
         return(
@@ -24,7 +29,7 @@ class Education extends Component{
                         </div>
                     </div>
                     <div className="row row-reversed">
-                        <button type="submit" className="save-button">Save</button>
+                        <button type="submit" className="save-button" onClick={this.onSaveClick}>Save</button>
                     </div>
                 </form>
             </div>

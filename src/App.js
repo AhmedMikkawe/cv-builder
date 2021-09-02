@@ -8,6 +8,7 @@ class App extends Component{
   constructor(props) {
     super(props);
       this.generalInfoHandler = this.generalInfoHandler.bind(this);
+      this.educationHandler = this.educationHandler.bind(this);
       this.state = {
       general_info:{
           first_name : "",
@@ -44,12 +45,24 @@ class App extends Component{
             },
         });
     }
+    educationHandler(){
+        let schoolName = document.getElementById('scname').value;
+        let majorName = document.getElementById('major-name').value;
+        let date = document.getElementById('date-study').value;
+        this.setState({
+            education : {
+                school_name : schoolName,
+                major_name : majorName,
+                date : date,
+            },
+        });
+    }
   render() {
     return (
         <div>
           <Header />
-          <GeneralInfo generalInfoHandler = {this.generalInfoHandler}/>
-          <Education />
+          <GeneralInfo clickHandler = {this.generalInfoHandler}/>
+          <Education clickHandler = {this.educationHandler}/>
           <Experience />
         </div>
 
