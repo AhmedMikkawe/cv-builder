@@ -17,6 +17,8 @@ class Education extends Component{
                         <div className="col">
                             <input type="text" name="majorName" id="major-name" placeholder="Major"/>
                         </div>
+                    </div>
+                    <div className="row">
                         <div className="col">
                             <input type="date" name="dateStudy" id="date-study" placeholder="Date of Study"/>
                         </div>

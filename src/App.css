@@ -17,29 +17,37 @@ nav h1{
     margin: 0;
     color: white;
 }
-.general-info{
+.general-info,.education,.experience{
     margin-top: 25px;
     border:1px solid #333333;
     border-radius: 5px;
     padding: 25px;
 }
-.general-info .col{
+.general-info .col,.education .col,
+.experience .col{
  padding: 25px;
 }
-.general-info label{
+.general-info label, .education label,
+.experience label{
     font-size: 16pt;
     margin-right: 10px;
 }
-.general-info input{
+.general-info input, .education input,
+.experience input{
     font-size: 16pt;
     padding: 10px;
 }
-.general-info input[type="text"],.general-info input[type="email"]{
+.general-info input[type="text"],.general-info input[type="email"],
+.education input[type="text"],.education input[type="email"],
+.experience input[type="text"],.experience input[type="email"]
+{
     border: none;
     border-bottom: 1px solid #333;
     outline: none;
 }
-.general-info input[type="text"]:focus,.general-info input[type="email"]:focus{
+.general-info input[type="text"]:focus,.general-info input[type="email"]:focus,
+.education input[type="text"]:focus,.education input[type="email"]:focus,
+.experience input[type="text"]:focus,.experience input[type="email"]:focus{
     background-color: #9f9e9e;
 }
 .save-button{
@@ -50,9 +58,10 @@ nav h1{
     font-weight: bold;
     border: none;
     cursor: pointer;
+    width: 200px;
 }
 
-.general-info .row{
+.general-info .row,.education .row{
     margin: 10px 0;
 }
 @media screen and (max-width: 700px){
