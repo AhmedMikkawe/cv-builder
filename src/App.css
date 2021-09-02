@@ -3,6 +3,12 @@
     max-width: 1200px;
     margin: auto;
 }
+.row{
+    display: flex;
+}
+.row-reversed{
+    flex-direction: row-reverse;
+}
 nav{
     background-color: midnightblue;
     padding: 10px 0px;
@@ -10,4 +16,47 @@ nav{
 nav h1{
     margin: 0;
     color: white;
+}
+.general-info{
+    margin-top: 25px;
+    border:1px solid #333333;
+    border-radius: 5px;
+    padding: 25px;
+}
+.general-info .col{
+ padding: 25px;
+}
+.general-info label{
+    font-size: 16pt;
+    margin-right: 10px;
+}
+.general-info input{
+    font-size: 16pt;
+    padding: 10px;
+}
+.general-info input[type="text"],.general-info input[type="email"]{
+    border: none;
+    border-bottom: 1px solid #333;
+    outline: none;
+}
+.general-info input[type="text"]:focus,.general-info input[type="email"]:focus{
+    background-color: #9f9e9e;
+}
+.save-button{
+    background-color: midnightblue;
+    color: white;
+    padding: 10px;
+    font-size: 16pt;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.general-info .row{
+    margin: 10px 0;
+}
+@media screen and (max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
 }
