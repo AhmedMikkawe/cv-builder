@@ -94,6 +94,9 @@ class App extends Component{
           <Education clickHandler = {this.educationHandler}/>
           <Experience clickHandler = {this.experienceHandler}/>
           <Modal info={this.state} />
+            <div className="row center" id="footer">
+                <h4>copyright &copy; 2021 | Ahmed Mikkawe</h4>
+            </div>
         </div>
 
     );
