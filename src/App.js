@@ -5,14 +5,50 @@ import GeneralInfo from "./components/General-info";
 import Education from "./components/Education";
 import Experience from "./components/Experience";
 class App extends Component{
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+      this.generalInfoHandler = this.generalInfoHandler.bind(this);
+      this.state = {
+      general_info:{
+          first_name : "",
+          last_name : "",
+          email : "",
+          phone : "",
+      },
+      education : {
+          school_name : "",
+          major_name : "",
+          date : "",
+      },
+      experience : {
+        company_name : "",
+        position_title : "",
+        date : {
+            from : "",
+            to : "",
+        },
+      },
+    };
   }
+    generalInfoHandler(){
+        let firstName = document.getElementById('fname').value;
+        let lastName = document.getElementById('lname').value;
+        let email = document.getElementById('email').value;
+        let phone = document.getElementById('phone').value;
+        this.setState({
+            general_info: {
+                first_name : firstName,
+                last_name : lastName,
+                email: email,
+                phone: phone
+            },
+        });
+    }
   render() {
     return (
         <div>
           <Header />
-          <GeneralInfo />
+          <GeneralInfo generalInfoHandler = {this.generalInfoHandler}/>
           <Education />
           <Experience />
         </div>

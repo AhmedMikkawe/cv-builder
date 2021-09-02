@@ -1,8 +1,13 @@
 import {Component} from "react";
 
 class GeneralInfo extends Component{
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
+        this.onSaveClick = this.onSaveClick.bind(this);
+    }
+    onSaveClick(e){
+        e.preventDefault();
+        this.props.generalInfoHandler();
     }
     render() {
         return(
@@ -28,7 +33,7 @@ class GeneralInfo extends Component{
                     </div>
                 </div>
                 <div className="row row-reversed">
-                    <button type="submit" className="save-button">Save</button>
+                    <button type="submit" className="save-button" onClick={this.onSaveClick}>Save</button>
                 </div>
                 </form>
             </div>

@@ -1,8 +1,8 @@
 import {Component} from "react";
 
 class Experience extends Component{
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
     }
     render() {
         return(
